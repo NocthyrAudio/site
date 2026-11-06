@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Nocthyr Audio | Soundtracks, Mixagem & Masterização</title>
+    <meta name="description" content="Nocthyr Audio por Jhonatan Gomes Ramos — Produção autoral de trilhas sonoras originais, mixagem e masterização para games, cinema e mídias digitais.">
+    
+    <!-- Favicon Iso Corvo -->
+    <link rel="icon" href="assets/images/Nocthyr_Audio_iso.png" type="image/png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/protection.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        nocthyr: {
+                            950: '#060607',
+                            900: '#0a0a0c',
+                            850: '#111114',
+                            800: '#17171c',
+                            700: '#25252e',
+                            400: '#9494a8',
+                            100: '#f4f4f7'
+                        },
+                        vividGreen: {
+                            400: '#4ade80',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857'
+                        },
+                        vividPurple: {
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Seleção de texto em roxo vívido */
+        ::selection {
+            background-color: #8b5cf6;
+            color: #ffffff;
+        }
+        ::-moz-selection {
+            background-color: #8b5cf6;
+            color: #ffffff;
+        }
+
+        body {
+            background-color: #060607;
+            color: #e2e2e8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: 0;
+            overflow-x: hidden;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        /* Molduras Suíças Minimalistas */
+        .swiss-border {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .swiss-card {
+            background: #111114;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .swiss-card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.15);
+        }
+
+        /* Rolagem suave no mobile para o catálogo */
+        .snap-carousel {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .snap-item {
+            scroll-snap-align: start;
+        }
+
+        /* Ocultar barra de rolagem mas manter navegação */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Scrollbar customizada */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060607;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #25252e;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body class="relative min-h-screen pb-36">
+
+    <!-- Linha Superior em Gradiente Vívido -->
+    <div class="h-1 bg-gradient-to-r from-vividPurple-600 via-vividGreen-500 to-vividPurple-600 w-full fixed top-0 left-0 z-50"></div>
+
+    <!-- Cabeçalho Principal -->
+    <header class="fixed top-1 left-0 right-0 z-40 bg-nocthyr-950/90 backdrop-blur-md border-b swiss-border">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2 md:py-3.5 flex items-center justify-between relative">
+            <!-- Brand Logo & Sub-tagline -->
+            <a href="#home" class="flex min-w-0 flex-1 items-center gap-2 sm:gap-3 group md:flex-none">
+                <div class="w-9 h-9 rounded-xl bg-nocthyr-800 border swiss-border flex items-center justify-center p-1 border-vividPurple-500/30 group-hover:border-vividGreen-500 transition-colors flex-shrink-0">
+                    <img src="assets/images/Nocthyr_Audio_iso.png" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'white\'><rect width=\'100\' height=\'100\' rx=\'22\' fill=\'%230a0a0c\'/><path d=\'M82,24 C68,26 60,35 50,48 C42,32 30,26 18,24 C14,35 18,48 24,56 C30,64 42,70 50,85 C58,70 70,64 76,56 C82,48 86,35 82,24 Z\'/></svg>'" alt="Nocthyr Audio Logo" class="w-full h-full object-contain filter invert">
+                </div>
+                <div class="flex min-w-0 flex-col">
+                    <div class="truncate text-xs sm:text-lg tracking-[0.08em] sm:tracking-widest font-bold text-white font-sans uppercase">
+                        NOCTHYR AUDIO
+                    </div>
+                    <span class="truncate text-[8px] sm:text-[10px] font-mono tracking-[0.08em] sm:tracking-widest text-vividGreen-400 uppercase -mt-1 font-semibold">soundtrack production</span>
+                </div>
+            </a>
+
+            <!-- Menu de Navegação -->
+            <nav class="hidden lg:flex flex-1 items-center justify-center gap-7 text-xs font-mono tracking-wider text-nocthyr-400 uppercase">
+                <a href="#home" class="hover:text-vividGreen-400 transition-colors">// Início</a>
+                <a href="#services" class="hover:text-vividGreen-400 transition-colors">// Serviços</a>
+                <a href="#discography" class="hover:text-vividGreen-400 transition-colors">// Catálogo</a>
+                <a href="#indie-lab" class="hover:text-vividGreen-400 transition-colors">// Indie Lab</a>
+                <a href="#about" class="hover:text-vividGreen-400 transition-colors">// Sobre</a>
+                <a href="#contact" class="hover:text-vividGreen-400 transition-colors">// Contato</a>
+            </nav>
+
+            <!-- Botão CTA -->
+            <div class="flex flex-shrink-0 items-center gap-2">
+                <a href="#contact" class="inline-flex flex-shrink-0 whitespace-nowrap px-2.5 sm:px-4 py-2 rounded-lg bg-vividGreen-500 hover:bg-vividGreen-600 text-nocthyr-950 font-bold text-[10px] sm:text-sm font-mono tracking-wide sm:tracking-wider uppercase transition-all shadow-lg shadow-vividGreen-500/20">
+                    Orçamento
+                </a>
+
+                <button id="mobile-menu-toggle" type="button" class="lg:hidden w-10 h-10 flex-shrink-0 rounded-lg border swiss-border bg-nocthyr-800 text-white flex items-center justify-center hover:border-vividPurple-500/50 transition-colors" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span id="mobile-menu-glyph" class="flex flex-col gap-1" aria-hidden="true">
+                        <span class="w-5 h-0.5 rounded bg-current"></span>
+                        <span class="w-5 h-0.5 rounded bg-current"></span>
+                        <span class="w-5 h-0.5 rounded bg-current"></span>
+                    </span>
+                    <svg id="mobile-menu-close-glyph" class="hidden w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <nav id="mobile-menu" class="hidden absolute top-full left-0 right-0 z-50 mt-2 mx-4 rounded-xl border swiss-border bg-nocthyr-950/95 backdrop-blur-md shadow-2xl p-2 text-xs font-mono tracking-wider text-nocthyr-400 uppercase lg:hidden" aria-label="Menu mobile">
+                <a href="#home" class="block rounded-lg px-4 py-3 hover:bg-nocthyr-800 hover:text-vividGreen-400 transition-colors">// Início</a>
+                <a href="#services" class="block rounded-lg px-4 py-3 hover:bg-nocthyr-800 hover:text-vividGreen-400 transition-colors">// Serviços</a>
+                <a href="#discography" class="block rounded-lg px-4 py-3 hover:bg-nocthyr-800 hover:text-vividGreen-400 transition-colors">// Catálogo</a>
+                <a href="#indie-lab" class="block rounded-lg px-4 py-3 hover:bg-nocthyr-800 hover:text-vividGreen-400 transition-colors">// Indie Lab</a>
+                <a href="#about" class="block rounded-lg px-4 py-3 hover:bg-nocthyr-800 hover:text-vividGreen-400 transition-colors">// Sobre</a>
+                <a href="#contact" class="block rounded-lg px-4 py-3 hover:bg-nocthyr-800 hover:text-vividGreen-400 transition-colors">// Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="relative z-10 space-y-24">
+
+        <!-- HERO SECTION COM GIF BACKGROUND DOS CORVOS & CANVAS DE ONDAS -->
+        <section id="home" class="relative pt-24 pb-12 sm:pt-32 sm:pb-20 px-4 sm:px-6 overflow-hidden border-b swiss-border sm:min-h-[85vh] flex items-center">
+            
+            <!-- GIF Background dos Corvos (Semitransparente & Atmosférico) -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <img src="assets/images/nocthyr_gif_.gif" onerror="this.onerror=null; this.style.display='none'" alt="Corvos Voando Background" class="w-full h-full object-cover object-[center_35%] sm:object-center opacity-45 sm:opacity-40 mix-blend-screen scale-105 filter contrast-125 brightness-110">
+                <!-- Gradientes de Fusão Suave no Topo, Base e Laterais -->
+                <div class="absolute inset-0 bg-gradient-to-b from-nocthyr-950/70 via-nocthyr-950/30 to-nocthyr-950/70"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-nocthyr-950/70 via-transparent to-nocthyr-950/70"></div>
+            </div>
+
+            <!-- Canvas Interativo de Ondas Sonoras Cinéticas -->
+            <canvas id="waves-canvas" class="absolute inset-0 z-0 opacity-30 pointer-events-none w-full h-full"></canvas>
+
+            <div class="relative z-10 max-w-7xl mx-auto w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-8 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-nocthyr-850/80 border border-vividPurple-500/40 text-[11px] sm:text-xs font-mono text-vividPurple-400 uppercase tracking-wider backdrop-blur-md shadow-lg whitespace-nowrap overflow-hidden text-ellipsis max-w-[calc(100vw-2rem)]">
+                                                    <span class="w-2 h-2 rounded-full bg-vividGreen-400 animate-pulse flex-shrink-0"></span>
+                                                    Jhonatan Gomes Ramos &mdash; Compositor & Produtor
+                                                </div>
+
+                        <h1 class="text-[clamp(1.75rem,8vw,4.5rem)] font-extrabold tracking-tight text-white leading-tight max-w-full">
+                            <span class="block">Música &amp; Áudio que</span>
+                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-vividGreen-400 via-vividPurple-400 to-vividPurple-500">Conectam a narrativa!</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-nocthyr-400 max-w-2xl font-normal leading-relaxed tracking-normal">
+                            Produção de trilhas sonoras originais, mixagem e masterização de alta fidelidade técnica desenvolvidas especialmente para games, cinema e universos audiovisuais.
+                        </p>
+
+                        <div class="pt-2 flex flex-col sm:flex-row gap-3 w-full">
+                                                    <a href="#discography" class="w-full sm:w-auto px-4 sm:px-5 py-3 rounded-lg bg-vividPurple-600 hover:bg-vividPurple-500 text-white text-xs sm:text-sm font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-vividPurple-600/25">
+                                                        <i data-lucide="disc" class="w-4 h-4"></i> Explorar Trilhas
+                                                    </a>
+                                                    <a href="https://wa.me/5545999957932?text=Ol%C3%A1%20Jhonatan,%20gostaria%20de%20um%20or%C3%A7amento%20para%20trilha%20sonora." target="_blank" class="w-full sm:w-auto px-4 sm:px-5 py-3 rounded-lg bg-vividGreen-500 hover:bg-vividGreen-600 text-nocthyr-950 font-bold text-xs sm:text-sm font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-vividGreen-500/20">
+                                                        <i data-lucide="message-square" class="w-4 h-4"></i> Falar no WhatsApp
+                                                    </a>
+                                                </div>
+                    </div>
+
+                    <div class="lg:col-span-4 swiss-card p-6 rounded-2xl space-y-4">
+                        <div class="font-mono text-xs text-vividGreen-400 uppercase tracking-wider font-semibold">// Foco Operacional</div>
+                        <ul class="text-xs sm:text-sm space-y-3 text-white font-medium">
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 rounded bg-nocthyr-800 border swiss-border flex items-center justify-center text-vividGreen-400 flex-shrink-0"><i data-lucide="music" class="w-3.5 h-3.5"></i></span>
+                                Trilhas Sonoras Originais (Games/Filmes)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 rounded bg-nocthyr-800 border swiss-border flex items-center justify-center text-vividPurple-400 flex-shrink-0"><i data-lucide="sliders" class="w-3.5 h-3.5"></i></span>
+                                Mixagem Estéreo & Stems Interativos
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 rounded bg-nocthyr-800 border swiss-border flex items-center justify-center text-vividGreen-400 flex-shrink-0"><i data-lucide="volume-2" class="w-3.5 h-3.5"></i></span>
+                                Masterização Comercial para Plataformas
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE SERVIÇOS -->
+        <section id="services" class="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b swiss-border pb-6">
+                            <div class="w-full">
+                                <div class="font-mono text-xs text-vividPurple-400 uppercase tracking-widest mb-1">// NOSSOS SERVIÇOS</div>
+                                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">Produção de Áudio Especializada</h2>
+                            </div>
+                            <p class="text-sm sm:text-base font-mono text-nocthyr-400 max-w-full sm:max-w-md leading-relaxed tracking-normal">
+                                Processo direto com o produtor Jhonatan Gomes Ramos, garantindo alinhamento criativo e pontualidade.
+                            </p>
+                        </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Serviço 1 -->
+                <article class="swiss-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-nocthyr-800 border border-vividPurple-500/30 flex items-center justify-center text-vividPurple-400">
+                            <i data-lucide="music-4" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white leading-snug tracking-tight">Produção de Trilhas Sonoras</h3>
+                        <p class="text-sm sm:text-base text-nocthyr-400 leading-relaxed tracking-normal">
+                            Composição sob medida para jogos eletrônicos, curtas, longas e séries. Criação de temas marcantes, orquestrações ricas e texturas sintéticas alinhadas à narrativa visual.
+                        </p>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-lg bg-nocthyr-800 hover:bg-vividGreen-500 hover:text-nocthyr-950 text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        Solicitar Trilha <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
+
+                <!-- Serviço 2 -->
+                <article class="swiss-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-nocthyr-800 border border-vividPurple-500/30 flex items-center justify-center text-vividPurple-400">
+                            <i data-lucide="sliders" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white leading-snug tracking-tight">Mixagem</h3>
+                        <p class="text-sm sm:text-base text-nocthyr-400 leading-relaxed tracking-normal">
+                            Equilíbrio preciso de frequências, profundidade e dinâmica. Tratamento de vozes, instrumentos e efeitos para dar clareza, impacto e espaço exato a cada elemento na mix.
+                        </p>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-lg bg-nocthyr-800 hover:bg-vividGreen-500 hover:text-nocthyr-950 text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        Solicitar Mixagem <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
+
+                <!-- Serviço 3 -->
+                <article class="swiss-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-nocthyr-800 border border-vividPurple-500/30 flex items-center justify-center text-vividPurple-400">
+                            <i data-lucide="disc-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white leading-snug tracking-tight">Masterização</h3>
+                        <p class="text-sm sm:text-base text-nocthyr-400 leading-relaxed tracking-normal">
+                            Etapa final que confere o polimento comercial, presença e consistência de volume (LUFS) exigidos para plataformas de streaming (Spotify, Apple Music) e distribuição física.
+                        </p>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-lg bg-nocthyr-800 hover:bg-vividGreen-500 hover:text-nocthyr-950 text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+                        Solicitar Masterização <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CATÁLOGO / DISCOGRAFIA (CAPAS NO TOPO & MODAL DE FAICAS) -->
+        <section id="discography" class="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b swiss-border pb-6">
+                <div>
+                    <div class="font-mono text-xs text-vividGreen-400 uppercase tracking-widest mb-1">// MOSTRA DE CATÁLOGO</div>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">Trilhas Sonoras & Trabalhos</h2>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-mono text-nocthyr-400 hidden sm:inline">Clique no álbum para ver a tracklist</span>
+                    <button onclick="scrollCarousel(-1)" class="p-2 rounded-lg bg-nocthyr-800 border swiss-border hover:border-vividPurple-500 text-white transition-colors" aria-label="Anterior">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="scrollCarousel(1)" class="p-2 rounded-lg bg-nocthyr-800 border swiss-border hover:border-vividPurple-500 text-white transition-colors" aria-label="Próximo">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carrossel com Capa dos Álbuns em cima -->
+            <div id="discography-carousel" class="flex gap-6 overflow-x-auto snap-carousel no-scrollbar pb-4 pt-2 -mx-2 px-2">
+                <!-- Cards Injetados via JS -->
+            </div>
+        </section>
+
+        <!-- NOVO CHAMARIZ: AUDIO LAB PARA DESENVOLVEDORES INDIE -->
+        <section id="indie-lab" class="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="swiss-card p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-nocthyr-850 via-nocthyr-900 to-nocthyr-950 border border-vividGreen-500/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none hidden md:block">
+                    <i data-lucide="gamepad-2" class="w-64 h-64 text-vividGreen-400"></i>
+                </div>
+
+                <div class="relative z-10 max-w-3xl space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-vividGreen-500/10 border border-vividGreen-500/30 text-xs font-mono text-vividGreen-400 uppercase tracking-wider">
+                        <i data-lucide="terminal" class="w-3.5 h-3.5"></i> Desenvolvedores Indie & Projetos Autorais
+                    </div>
+
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight tracking-tight">
+                        Precisa de uma identidade sonora marcante para o seu jogo ou filme?
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-nocthyr-400 leading-relaxed tracking-normal">
+                        Entendemos a realidade de orçamentos independentes. Na Nocthyr Audio, oferecemos suporte completo com pacotes flexíveis por minuto de composição, entrega de stems separados para áudio adaptativo e integração perfeita com seu projeto.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs pt-2">
+                        <div class="p-4 rounded-xl bg-nocthyr-950 border swiss-border space-y-1">
+                            <span class="text-vividPurple-400 font-bold block">Stems Prontos</span>
+                            <span class="text-nocthyr-400 text-xs leading-relaxed">Faixas separadas para integração em engines.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-nocthyr-950 border swiss-border space-y-1">
+                            <span class="text-vividGreen-400 font-bold block">Prazos Ágeis</span>
+                            <span class="text-nocthyr-400 text-xs leading-relaxed">Comunicação direta sem burocracia.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-nocthyr-950 border swiss-border space-y-1">
+                            <span class="text-vividPurple-400 font-bold block">Licença Exclusiva</span>
+                            <span class="text-nocthyr-400 text-xs leading-relaxed">Direitos comerciais completos inclusos.</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-wrap gap-4">
+                        <a href="https://wa.me/5545999957932?text=Ol%C3%A1%20Jhonatan,%20sou%20desenvolvedor%20indie%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20projeto!" target="_blank" class="px-6 py-3 rounded-lg bg-vividGreen-500 hover:bg-vividGreen-600 text-nocthyr-950 font-bold font-mono text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center gap-2 shadow-lg shadow-vividGreen-500/20">
+                            <i data-lucide="gamepad-2" class="w-4 h-4"></i> Orçamento para Indie Dev
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="about" class="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="swiss-card p-6 sm:p-12 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5 relative group">
+                    <div class="aspect-square rounded-2xl overflow-hidden border swiss-border relative z-10 bg-nocthyr-900">
+                        <img src="assets/images/Nocthyr_bk2.jpg" onerror="this.onerror=null; this.src='https://placehold.co/600x600/17171c/ffffff?text=Jhonatan+Gomes+Ramos'" alt="Jhonatan Gomes Ramos - Nocthyr Audio" class="w-full h-full object-cover filter grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105">
+                    </div>
+                    <div class="absolute -inset-2 bg-gradient-to-r from-vividPurple-600 to-vividGreen-500 rounded-3xl opacity-20 blur-xl group-hover:opacity-40 transition-opacity"></div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="font-mono text-xs text-vividPurple-400 uppercase tracking-widest">// POR TRÁS DA NOCTHYR AUDIO</div>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-white">Jhonatan Gomes Ramos</h2>
+                    
+                    <div class="w-16 h-1 bg-gradient-to-r from-vividGreen-400 to-vividPurple-500 rounded-full"></div>
+
+                    <div class="space-y-4 text-sm sm:text-base text-nocthyr-400 leading-7 tracking-normal text-left">
+                        <p>
+                            A <strong class="text-white">Nocthyr Audio</strong> é o estúdio de produção autoral criado pelo músico e produtor <strong class="text-white">Jhonatan Gomes Ramos</strong>. Com foco total na entrega estética e técnica, o projeto nasceu da dedicação em transformar visões criativas de cineastas e desenvolvedores em assinaturas sonoras vivas.
+                        </p>
+
+                        <p>
+                            Aqui cada trabalho é conduzido de forma individualizada, priorizando a profundidade narrativa, sempre valorizando o contexto do seu projeto.
+                        </p>
+                    </div>
+                    <a href="https://jgr77.bandcamp.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-vividGreen-500 text-nocthyr-950 font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-vividGreen-400 transition-colors">
+                        Adquira os Álbuns
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO -->
+        <section id="contact" class="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 border-t swiss-border pt-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="font-mono text-xs text-vividGreen-400 uppercase tracking-widest">// VAMOS CONVERSAR</div>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight">Inicie seu Projeto</h2>
+                    <p class="text-sm sm:text-base text-nocthyr-400 leading-relaxed tracking-normal">
+                        Preencha o formulário para enviar os detalhes do seu briefing diretamente para o e-mail oficial da Nocthyr Audio ou entre em contato direto pelo WhatsApp.
+                    </p>
+
+                    <div class="space-y-4 text-sm sm:text-base pt-2 tracking-normal">
+                        <div class="flex items-center gap-3 text-nocthyr-400">
+                            <div class="w-9 h-9 rounded-lg bg-nocthyr-800 border swiss-border flex items-center justify-center text-vividGreen-400 flex-shrink-0">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                            </div>
+                            <a href="mailto:nocthyraudio@gmail.com" class="hover:text-vividGreen-400 transition-colors text-white font-medium break-all">nocthyraudio@gmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-3 text-nocthyr-400">
+                            <div class="w-9 h-9 rounded-lg bg-nocthyr-800 border swiss-border flex items-center justify-center text-vividPurple-400 flex-shrink-0">
+                                <i data-lucide="user" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-white font-medium">Jhonatan Gomes Ramos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 swiss-card p-6 sm:p-8 rounded-2xl">
+                    <form onsubmit="sendContactForm(event)" class="space-y-4 text-sm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block font-mono text-xs sm:text-sm text-nocthyr-400 mb-1.5">Seu Nome / Estúdio</label>
+                                <input type="text" id="form-name" required placeholder="Ex: Gabriel / Indie Studio" class="w-full bg-nocthyr-900 border swiss-border rounded-lg px-4 py-3.5 text-white text-sm focus:outline-none focus:border-vividPurple-500 min-h-[48px]">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs sm:text-sm text-nocthyr-400 mb-1.5">Seu E-mail</label>
+                                <input type="email" id="form-email" required placeholder="seuemail@exemplo.com" class="w-full bg-nocthyr-900 border swiss-border rounded-lg px-4 py-3.5 text-white text-sm focus:outline-none focus:border-vividPurple-500 min-h-[48px]">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-mono text-xs sm:text-sm text-nocthyr-400 mb-1.5">Serviço Desejado</label>
+                            <select id="form-service" class="w-full bg-nocthyr-900 border swiss-border rounded-lg px-4 py-3.5 text-white text-sm focus:outline-none focus:border-vividPurple-500 min-h-[48px]">
+                                <option>Produção de Trilha Sonora Original</option>
+                                <option>Mixagem</option>
+                                <option>Masterização</option>
+                                <option>Pacote Completo (Trilha + Mix + Master)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block font-mono text-xs sm:text-sm text-nocthyr-400 mb-1.5">Detalhes do Projeto</label>
+                            <textarea id="form-message" rows="4" required placeholder="Conte um pouco sobre o projeto, prazos e referências sonoras..." class="w-full bg-nocthyr-900 border swiss-border rounded-lg px-4 py-3.5 text-white text-sm focus:outline-none focus:border-vividPurple-500 min-h-[120px]"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-lg bg-vividGreen-500 hover:bg-vividGreen-600 text-nocthyr-950 font-bold text-xs sm:text-sm font-mono uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-vividGreen-500/20 min-h-[48px]">
+                            <i data-lucide="send" class="w-4 h-4"></i> Enviar para nocthyraudio@gmail.com
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ COMPLETO -->
+    <footer class="mt-24 border-t swiss-border bg-nocthyr-950 py-10 px-4 sm:px-6 text-xs sm:text-sm font-mono text-nocthyr-400">
+        <div class="max-w-7xl mx-auto space-y-6">
+            <div class="flex flex-col items-center justify-between gap-4 border-b swiss-border pb-6 text-center">
+                <!-- Logo Oficial Completa no Rodapé -->
+                <a href="#home" class="flex items-center gap-3">
+                    <img src="assets/images/Nocthyr Audio-.png" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 60\' fill=\'white\'><text x=\'10\' y=\'40\' font-size=\'28\' font-weight=\'bold\'>NOCTHYR AUDIO</text></svg>'" alt="Nocthyr Audio" class="h-7 object-contain">
+                </a>
+
+                <!-- Links do Menu no Rodapé -->
+                <nav class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 uppercase tracking-wider text-nocthyr-400 text-[11px] sm:text-xs">
+                    <a href="#home" class="hover:text-vividGreen-400 transition-colors">Início</a>
+                    <a href="#services" class="hover:text-vividGreen-400 transition-colors">Serviços</a>
+                    <a href="#discography" class="hover:text-vividGreen-400 transition-colors">Catálogo</a>
+                    <a href="#indie-lab" class="hover:text-vividGreen-400 transition-colors">Indie Lab</a>
+                    <a href="#about" class="hover:text-vividGreen-400 transition-colors">Sobre</a>
+                    <a href="#contact" class="hover:text-vividGreen-400 transition-colors">Contato</a>
+                    <a href="privacy.html" class="hover:text-vividGreen-400 transition-colors">Privacidade</a>
+                </nav>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+                <!-- Copyright Exclusivo Solicitado -->
+                <div class="text-white font-medium">
+                                    2026©Nocthyr Audio│All right reserved
+                                </div>
+                <div>
+                    Contato: <a href="mailto:nocthyraudio@gmail.com" class="text-vividGreen-400 hover:underline">nocthyraudio@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP EM VERDE VÍVIDO -->
+    <a href="https://wa.me/5545999957932?text=Ol%C3%A1%20Jhonatan,%20gostaria%20de%20um%20or%C3%A7amento%20para%20trilha%20sonora." target="_blank" class="fixed bottom-24 right-5 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-vividGreen-500 text-nocthyr-950 flex items-center justify-center shadow-xl shadow-vividGreen-500/30 hover:bg-vividGreen-400 transition-transform hover:scale-110" aria-label="Contato via WhatsApp">
+        <i data-lucide="message-circle" class="w-6 h-6 sm:w-7 sm:h-7 fill-current"></i>
+    </a>
+
+    <!-- BARRA FIXA DESTACADA DE PLAYER DE ÁUDIO NO RODAPÉ -->
+    <div id="persistent-player" class="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-nocthyr-950 via-nocthyr-900 to-nocthyr-950 border-t-2 border-vividPurple-500 shadow-2xl backdrop-blur-xl px-4 sm:px-6 py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+            
+            <!-- Metadata da Trilha -->
+            <div class="flex items-center gap-3 w-full md:w-1/3">
+                <img id="player-thumb" src="assets/images/Distant Mountains_Nocthyr_Audio_.jpg" onerror="this.onerror=null; this.src='https://placehold.co/100x100/17171c/ffffff?text=Nocthyr'" alt="Faixa" class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover border border-vividPurple-500/40 flex-shrink-0">
+                <div class="min-w-0 flex-1">
+                    <h4 id="player-title" class="font-bold text-sm text-white truncate">Distant Mountains - Remastered</h4>
+                    <p id="player-meta" class="text-[11px] sm:text-xs font-mono text-vividGreen-400 truncate">Dark RPG Soundtrack • Track 01</p>
+                </div>
+            </div>
+
+            <!-- Controles do Player e Barra de Progresso -->
+            <div class="flex flex-col items-center gap-1 w-full md:w-2/3 max-w-lg">
+                <div class="flex items-center gap-4">
+                    <button onclick="playPrevTrack()" class="text-nocthyr-400 hover:text-white transition-colors" aria-label="Anterior">
+                        <i data-lucide="skip-back" class="w-4 h-4"></i>
+                    </button>
+                    <button id="main-play-btn" onclick="togglePlayPause()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-vividGreen-500 text-nocthyr-950 flex items-center justify-center hover:bg-vividGreen-400 transition-transform hover:scale-105 shadow-md shadow-vividGreen-500/30" aria-label="Tocar/Pausar">
+                        <i data-lucide="play" id="main-play-icon" class="w-4 h-4 fill-current ml-0.5"></i>
+                    </button>
+                    <button onclick="stopTrack()" class="text-nocthyr-400 hover:text-white transition-colors" aria-label="Parar">
+                        <i data-lucide="square" class="w-4 h-4 fill-current"></i>
+                    </button>
+                    <button onclick="playNextTrack()" class="text-nocthyr-400 hover:text-white transition-colors" aria-label="Próximo">
+                        <i data-lucide="skip-forward" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <div class="w-full flex items-center gap-2 sm:gap-3">
+                    <span id="player-time-current" class="text-[10px] font-mono text-nocthyr-400 w-7 text-right">0:00</span>
+                    <div class="relative flex-1 h-1.5 bg-nocthyr-800 rounded-full overflow-hidden cursor-pointer border border-white/5" onclick="seekTrack(event)" id="progress-bar-container">
+                        <div id="player-progress" class="h-full bg-gradient-to-r from-vividGreen-400 to-vividPurple-500 w-0 transition-all duration-100"></div>
+                    </div>
+                    <span id="player-time-duration" class="text-[10px] font-mono text-nocthyr-400 w-7">2:30</span>
+                </div>
+            </div>
+
+            <!-- Volume -->
+            <div class="hidden lg:flex items-center justify-end gap-2 w-1/4">
+                <i data-lucide="volume-2" class="w-4 h-4 text-vividPurple-400"></i>
+                <input type="range" min="0" max="100" value="80" class="w-20 accent-vividGreen-500 cursor-pointer bg-nocthyr-800 rounded h-1.5" oninput="setVolume(this.value)">
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP DA LISTA DE FAIXAS, FORA DO PLAYER FIXO PARA CENTRALIZAR NA TELA -->
+    <div id="album-modal" class="fixed inset-0 z-[60] bg-black/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="modal-album-title">
+        <div class="swiss-card bg-nocthyr-950 border border-vividPurple-500/50 w-full max-w-[calc(100vw-1rem)] sm:max-w-lg p-4 sm:p-6 rounded-2xl relative shadow-2xl flex flex-col gap-4 sm:gap-5 max-h-[90vh] overflow-hidden">
+            <button onclick="closeAlbumModal()" class="absolute top-2 right-2 sm:top-4 sm:right-4 text-nocthyr-400 hover:text-white transition-colors p-1 sm:p-2" aria-label="Fechar Modal">
+                <i data-lucide="x" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+            </button>
+
+            <div class="flex items-center gap-4 border-b swiss-border pb-4">
+                <img id="modal-album-img" src="" alt="Capa do álbum" class="w-16 h-16 rounded-lg object-cover border swiss-border flex-shrink-0">
+                <div class="min-w-0 flex-1">
+                    <span id="modal-album-cat" class="text-[11px] font-mono text-vividGreen-400 uppercase tracking-wider block"></span>
+                    <h3 id="modal-album-title" class="font-bold text-lg sm:text-xl text-white truncate"></h3>
+                    <p id="modal-album-desc" class="text-sm text-nocthyr-400 line-clamp-1"></p>
+                </div>
+            </div>
+
+            <div class="space-y-2 max-h-60 overflow-y-auto pr-1" id="modal-tracklist">
+                <!-- Faixas injetadas dinamicamente -->
+            </div>
+
+            <div class="pt-2 border-t swiss-border flex items-center justify-between text-xs font-mono">
+                <span class="text-nocthyr-400">2026©Nocthyr Audio│All right reserved</span>
+                <button onclick="closeAlbumModal()" class="px-4 py-2 rounded bg-nocthyr-800 hover:bg-vividPurple-600 text-white transition-colors uppercase">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT PRINCIPAL: PLAYER DE ÁUDIO, ANIMAÇÃO DO CANVAS & POPUP MODAL -->
+    <script>
+        const PORTFOLIO_ALBUMS = [
+            {
+                            id: "album-1",
+                            title: "Distant Mountains - Remastered",
+                            desc: "Trilha sonora atmosférica de mistério e fantasia sombria.",
+                            img: "assets/images/Distant Mountains_Nocthyr_Audio_.jpg",
+                            category: "Dark RPG",
+                            tracks: [
+                                { title: "Ancient return", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Ancient return.flac", synth: "dark" },
+                                { title: "Distant mountains", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Distant mountains.flac", synth: "dark" },
+                                { title: "Eminent danger", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Eminent danger.flac", synth: "dark" },
+                                { title: "Heavenly breeze", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Heavenly breeze.flac", synth: "dark" },
+                                { title: "In the Wake", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/In the Wake.flac", synth: "dark" },
+                                { title: "Last Light", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Last Light.flac", synth: "dark" },
+                                { title: "Mystic Ember", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Mystic Ember.flac", synth: "dark" },
+                                { title: "Nimbus", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Nimbus.flac", synth: "dark" },
+                                { title: "Pinwheel", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/Pinwheel.flac", synth: "dark" },
+                                { title: "The beginning", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/The beginning.flac", synth: "dark" },
+                                { title: "The Weight", duration: '', bpm: '', audio: "assets/audio/Distant Mountains/The Weight.flac", synth: "dark" }
+                            ]
+                        },
+            {
+                id: "album-2",
+                                title: "Elevated Aurora - Remastered",
+                                desc: "Texturas etéreas com síntese moderna e orquestração.",
+                img: "assets/images/Elevated_Aurora_Nocthyr_Audio.jpg",
+                category: "Fantasy RPG",
+                tracks: [
+                    { title: "Agitated Bards", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Agitated Bards.flac", synth: "ambient" },
+                    { title: "Broken Sanctuary", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Broken Sanctuary.flac", synth: "ambient" },
+                    { title: "Dawn of the Valley", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Dawn of the Valley.flac", synth: "ambient" },
+                    { title: "Elevated Aurora", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Elevated Aurora.flac", synth: "ambient" },
+                    { title: "Eternal Omniscience", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Eternal Omniscience.flac", synth: "ambient" },
+                    { title: "Labyrinth", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Labyrinth.flac", synth: "ambient" },
+                    { title: "Legacy of the faithful", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Legacy of the faithful.flac", synth: "ambient" },
+                    { title: "Northern Kingdoms", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Northern Kingdoms.flac", synth: "ambient" },
+                    { title: "Samira\u0027s tears", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Samira\u0027s tears.flac", synth: "ambient" },
+                    { title: "Swamp Dangers", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Swamp Dangers.flac", synth: "ambient" },
+                    { title: "Tavern Legends", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Tavern Legends.flac", synth: "ambient" },
+                    { title: "Twisted Islands", duration: '', bpm: '', audio: "assets/audio/Elevated Aurora/Twisted Islands.flac", synth: "ambient" }
+                ]
+            },
+            {
+                id: "album-3",
+                                title: "Event Horizon - Remastered",
+                                desc: "Trilha de suspense dinâmico e tensão sci-fi.",
+                img: "assets/images/Nocthyr_Event horizon_Nocthyr_Audio.jpg",
+                category: "Cinematic Suspense",
+                tracks: [
+                    { title: "Blue planet", duration: '', bpm: '', audio: "assets/audio/Event horizon/Blue planet.flac", synth: "tension" },
+                    { title: "Cyber Cântaro", duration: '', bpm: '', audio: "assets/audio/Event horizon/Cyber Cântaro.flac", synth: "tension" },
+                    { title: "Event horizon", duration: '', bpm: '', audio: "assets/audio/Event horizon/Event horizon.flac", synth: "tension" },
+                    { title: "Solar system", duration: '', bpm: '', audio: "assets/audio/Event horizon/Solar system.flac", synth: "tension" },
+                    { title: "Stardust", duration: '', bpm: '', audio: "assets/audio/Event horizon/Stardust.flac", synth: "tension" }
+                ]
+            },
+            {
+                id: "album-4",
+                                title: "Iron Pulse",
+                                desc: "Batidas eletrônicas intensas para ação e ficção científica.",
+                img: "assets/images/Nocthyr_Iron Pulse_.jpg",
+                category: "Sci-Fi Electronic",
+                tracks: [
+                    { title: "Abrasive Collar", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Abrasive Collar.flac", synth: "dark" },
+                    { title: "Circuit Warfare", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Circuit Warfare.flac", synth: "dark" },
+                    { title: "Core Ignition", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Core Ignition.flac", synth: "dark" },
+                    { title: "Emergent Core", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Emergent Core.flac", synth: "dark" },
+                    { title: "Hollow Cathedral", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Hollow Cathedral.flac", synth: "dark" },
+                    { title: "Iron Pulse", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Iron Pulse.flac", synth: "dark" },
+                    { title: "Last Transmission", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Last Transmission.flac", synth: "dark" },
+                    { title: "Machine Overdrive", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Machine Overdrive.flac", synth: "dark" },
+                    { title: "Neural Sync", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Neural Sync.flac", synth: "dark" },
+                    { title: "Steel Awakening", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Steel Awakening.flac", synth: "dark" },
+                    { title: "Steel Ghost", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Steel Ghost.flac", synth: "dark" },
+                    { title: "Titan Protocol", duration: '', bpm: '', audio: "assets/audio/Iron Pulse/Titan Protocol.flac", synth: "dark" }
+                ]
+            },
+            {
+                id: "album-5",
+                                title: "Lost Kingdom",
+                                desc: "Tema orquestral épico e imersivo.",
+                img: "assets/images/Nocthyr_Lost Kingdom_.jpg",
+                category: "Epic RPG",
+                tracks: [
+                    { title: "Ice Dancing", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/Ice Dancing.flac", synth: "ambient" },
+                    { title: "King’s Return", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/King’s Return.flac", synth: "ambient" },
+                    { title: "Lost Kingdom", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/Lost Kingdom.flac", synth: "ambient" },
+                    { title: "Silent Throne", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/Silent Throne.flac", synth: "ambient" },
+                    { title: "Soul Runes", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/Soul Runes.flac", synth: "ambient" },
+                    { title: "The Urban Nexus", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/The Urban Nexus.flac", synth: "ambient" },
+                    { title: "When the Banners Fell", duration: '', bpm: '', audio: "assets/audio/Lost Kingdom/When the Banners Fell.flac", synth: "ambient" }
+                ]
+            }        ];
+
+        let currentAlbumIndex = 0;
+        let currentTrackSubIndex = 0;
+        let isPlaying = false;
+        let currentProgressSec = 0;
+        let audioVolume = 0.8;
+        let previewAudio = null;
+        let currentAudioId = 0;
+        let playRequestId = 0;
+
+        function formatTime(seconds) {
+            if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        function reportPlaybackError(error, requestId, audio) {
+            if (requestId !== playRequestId || audio !== previewAudio || error.name === 'AbortError') return;
+            isPlaying = false;
+            updatePlayIcon(false);
+            document.getElementById('player-meta').innerText = 'Não foi possível reproduzir esta faixa.';
+            console.error('Falha ao reproduzir a faixa de áudio.', error);
+        }
+
+        function startTrackAudio(track) {
+            if (previewAudio) previewAudio.pause();
+
+            const audioId = ++currentAudioId;
+            const audio = new Audio(track.audio);
+            audio.preload = 'metadata';
+            audio.volume = audioVolume;
+            previewAudio = audio;
+
+            audio.addEventListener('loadedmetadata', () => {
+                if (audioId !== currentAudioId) return;
+                document.getElementById('player-time-duration').innerText = formatTime(audio.duration);
+                updateProgressUI(audio.duration);
+            });
+            audio.addEventListener('timeupdate', () => {
+                if (audioId !== currentAudioId) return;
+                currentProgressSec = audio.currentTime;
+                updateProgressUI(audio.duration);
+            });
+            audio.addEventListener('ended', () => {
+                if (audioId !== currentAudioId) return;
+                isPlaying = false;
+                updatePlayIcon(false);
+            });
+            audio.addEventListener('error', () => {
+                if (audioId !== currentAudioId) return;
+                reportPlaybackError(audio.error || new Error('Arquivo de áudio indisponível.'), playRequestId, audio);
+            });
+
+            playCurrentAudio();
+        }
+        function renderDiscography() {
+            const container = document.getElementById('discography-carousel');
+            container.innerHTML = '';
+
+            PORTFOLIO_ALBUMS.forEach((album, index) => {
+                const card = `
+                    <article class="swiss-card rounded-2xl overflow-hidden flex flex-col justify-between w-[270px] sm:w-[300px] flex-shrink-0 snap-item group cursor-pointer" onclick="openAlbumModal(${index})">
+                        <div class="relative aspect-square overflow-hidden bg-nocthyr-900 border-b swiss-border">
+                            <img src="${album.img}" onerror="this.onerror=null; this.src='https://placehold.co/400x400/17171c/ffffff?text=${encodeURIComponent(album.title)}'" alt="${album.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-nocthyr-950 via-transparent to-transparent opacity-80"></div>
+                            
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-nocthyr-950/80 backdrop-blur-md border swiss-border font-mono text-[11px] text-vividGreen-400 uppercase tracking-wider">
+                                ${album.category}
+                            </span>
+
+                            <div class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-vividPurple-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i data-lucide="list-music" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+
+                        <div class="p-5 space-y-3 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-bold text-base sm:text-lg text-white group-hover:text-vividPurple-400 transition-colors line-clamp-1">${album.title}</h3>
+                                <p class="text-sm text-nocthyr-400 mt-1 line-clamp-2 leading-relaxed">${album.desc}</p>
+                            </div>
+
+                            <div class="pt-3 border-t swiss-border flex items-center justify-between text-xs font-mono text-vividGreen-400">
+                                <span>${album.tracks.length} Faixas</span>
+                                <span class="text-white hover:underline">Ver Faixas &rarr;</span>
+                            </div>
+                        </div>
+                    </article>
+                `;
+                container.innerHTML += card;
+            });
+            lucide.createIcons();
+        }
+
+        function openAlbumModal(albumIndex) {
+            const album = PORTFOLIO_ALBUMS[albumIndex];
+
+            document.getElementById('modal-album-img').src = album.img;
+            document.getElementById('modal-album-title').innerText = album.title;
+            document.getElementById('modal-album-cat').innerText = album.category;
+            document.getElementById('modal-album-desc').innerText = album.desc;
+
+            const listContainer = document.getElementById('modal-tracklist');
+            listContainer.innerHTML = '';
+
+            album.tracks.forEach((track, subIndex) => {
+                const isSelected = isPlaying && currentAlbumIndex === albumIndex && currentTrackSubIndex === subIndex;
+                const trackItem = `
+                    <div class="p-3 rounded-lg ${isSelected ? 'bg-vividPurple-600/20 border border-vividPurple-500' : 'bg-nocthyr-900 border swiss-border'} flex items-center justify-between gap-3 text-xs">
+                        <div class="min-w-0 flex-1">
+                            <h4 class="font-medium text-white truncate">${track.title}</h4>
+                            <span class="text-[11px] font-mono text-nocthyr-400">${track.duration}</span>
+                        </div>
+                        <button onclick="playTrackFromModal(${albumIndex}, ${subIndex})" class="w-8 h-8 rounded-full ${isSelected ? 'bg-vividGreen-500 text-nocthyr-950' : 'bg-nocthyr-800 text-white'} flex items-center justify-center flex-shrink-0 hover:scale-105 transition-transform">
+                            <i data-lucide="${isSelected ? 'pause' : 'play'}" class="w-4 h-4 fill-current ${isSelected ? '' : 'ml-0.5'}"></i>
+                        </button>
+                    </div>
+                `;
+                listContainer.innerHTML += trackItem;
+            });
+
+            document.getElementById('album-modal').classList.remove('hidden');
+            document.getElementById('album-modal').classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeAlbumModal() {
+            document.getElementById('album-modal').classList.add('hidden');
+            document.getElementById('album-modal').classList.remove('flex');
+        }
+
+        function playTrackFromModal(albumIndex, subIndex) {
+            if (currentAlbumIndex === albumIndex && currentTrackSubIndex === subIndex && previewAudio) {
+                if (isPlaying) pauseTrack();
+                else playCurrentAudio();
+                openAlbumModal(albumIndex);
+                return;
+            }
+
+            currentAlbumIndex = albumIndex;
+            currentTrackSubIndex = subIndex;
+            const album = PORTFOLIO_ALBUMS[albumIndex];
+            const track = album.tracks[subIndex];
+
+            document.getElementById('player-thumb').src = album.img;
+            document.getElementById('player-title').innerText = track.title;
+            document.getElementById('player-meta').innerText = album.category;
+
+            currentProgressSec = 0;
+            document.getElementById('player-time-current').innerText = '0:00';
+            document.getElementById('player-time-duration').innerText = '0:00';
+            document.getElementById('player-progress').style.width = '0%';
+            startTrackAudio(track);
+
+            openAlbumModal(albumIndex);
+        }
+
+        function pauseTrack() {
+            isPlaying = false;
+            playRequestId++;
+            if (previewAudio) previewAudio.pause();
+            updatePlayIcon(false);
+        }
+
+        function stopTrack() {
+            pauseTrack();
+            if (previewAudio) previewAudio.currentTime = 0;
+            currentProgressSec = 0;
+            updateProgressUI(previewAudio ? previewAudio.duration : 0);
+        }
+
+        function playCurrentAudio() {
+            if (!previewAudio) return;
+
+            const audio = previewAudio;
+            const requestId = ++playRequestId;
+            isPlaying = true;
+            updatePlayIcon(true);
+            const playPromise = audio.play();
+            if (playPromise) {
+                playPromise.catch(error => reportPlaybackError(error, requestId, audio));
+            }
+        }
+
+        function togglePlayPause() {
+            if (isPlaying) pauseTrack();
+            else if (previewAudio) playCurrentAudio();
+            else playTrackFromModal(currentAlbumIndex, currentTrackSubIndex);
+        }
+
+        function playNextTrack() {
+            const album = PORTFOLIO_ALBUMS[currentAlbumIndex];
+            if (currentTrackSubIndex + 1 < album.tracks.length) {
+                playTrackFromModal(currentAlbumIndex, currentTrackSubIndex + 1);
+            } else {
+                playTrackFromModal((currentAlbumIndex + 1) % PORTFOLIO_ALBUMS.length, 0);
+            }
+        }
+
+        function playPrevTrack() {
+            if (currentTrackSubIndex > 0) {
+                playTrackFromModal(currentAlbumIndex, currentTrackSubIndex - 1);
+            } else {
+                const prevAlbumIdx = (currentAlbumIndex - 1 + PORTFOLIO_ALBUMS.length) % PORTFOLIO_ALBUMS.length;
+                playTrackFromModal(prevAlbumIdx, PORTFOLIO_ALBUMS[prevAlbumIdx].tracks.length - 1);
+            }
+        }
+
+        function updatePlayIcon(playing) {
+            const icon = document.getElementById('main-play-icon');
+            icon.setAttribute('data-lucide', playing ? 'pause' : 'play');
+            lucide.createIcons();
+        }
+
+        function updateProgressUI(durationSec) {
+            const duration = Number.isFinite(durationSec) && durationSec > 0 ? durationSec : 0;
+            const percent = duration ? Math.min(100, (currentProgressSec / duration) * 100) : 0;
+            document.getElementById('player-progress').style.width = `${percent}%`;
+            document.getElementById('player-time-current').innerText = formatTime(currentProgressSec);
+        }
+
+        function seekTrack(e) {
+            const container = document.getElementById('progress-bar-container');
+            const rect = container.getBoundingClientRect();
+            if (!previewAudio || !Number.isFinite(previewAudio.duration) || !rect.width) return;
+            const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            previewAudio.currentTime = percent * previewAudio.duration;
+            currentProgressSec = previewAudio.currentTime;
+            updateProgressUI(previewAudio.duration);
+        }
+
+        function setVolume(val) {
+            audioVolume = val / 100;
+            if (previewAudio) previewAudio.volume = audioVolume;
+        }
+
+        function initMobileMenu() {
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (!toggle || !menu) return;
+
+            function setMenuOpen(isOpen) {
+                menu.classList.toggle('hidden', !isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+                toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+                document.getElementById('mobile-menu-glyph').classList.toggle('hidden', isOpen);
+                document.getElementById('mobile-menu-close-glyph').classList.toggle('hidden', !isOpen);
+            }
+
+            toggle.addEventListener('click', () => {
+                setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true');
+            });
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => setMenuOpen(false));
+            });
+            document.addEventListener('click', event => {
+                if (!menu.classList.contains('hidden') && !menu.contains(event.target) && !toggle.contains(event.target)) {
+                    setMenuOpen(false);
+                }
+            });
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && !menu.classList.contains('hidden')) {
+                    setMenuOpen(false);
+                    toggle.focus();
+                }
+            });
+            const desktopViewport = window.matchMedia('(min-width: 1024px)');
+            const closeMenuOnDesktop = event => {
+                if (event.matches) setMenuOpen(false);
+            };
+            if (desktopViewport.addEventListener) desktopViewport.addEventListener('change', closeMenuOnDesktop);
+            else desktopViewport.addListener(closeMenuOnDesktop);
+        }
+        initMobileMenu();
+
+        function scrollCarousel(direction) {
+            const container = document.getElementById('discography-carousel');
+            container.scrollBy({ left: direction * 300, behavior: 'smooth' });
+        }
+
+        function sendContactForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const service = document.getElementById('form-service').value;
+            const message = document.getElementById('form-message').value;
+
+            const mailtoUrl = `mailto:nocthyraudio@gmail.com?subject=Orçamento%20Nocthyr%20Audio:%20${encodeURIComponent(service)}&body=Nome:%20${encodeURIComponent(name)}%0AE-mail:%20${encodeURIComponent(email)}%0AServiço:%20${encodeURIComponent(service)}%0AMensagem:%20${encodeURIComponent(message)}`;
+            
+            window.location.href = mailtoUrl;
+        }
+
+        // Anima o canvas apenas enquanto a seção está visível.
+        function initWavesCanvas() {
+            const canvas = document.getElementById('waves-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let step = 0;
+            let isVisible = false;
+            let animationFrame = null;
+            let lastFrameTime = 0;
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = canvas.offsetHeight || 500;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            function draw(timestamp) {
+                animationFrame = null;
+                if (!isVisible || document.hidden) return;
+                if (timestamp - lastFrameTime < 1000 / 30) {
+                    animationFrame = requestAnimationFrame(draw);
+                    return;
+                }
+                lastFrameTime = timestamp;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                step += 0.02;
+
+                const lines = 4;
+                for (let i = 0; i < lines; i++) {
+                    ctx.beginPath();
+                    ctx.lineWidth = 1.5;
+                    ctx.strokeStyle = i % 2 === 0 ? 'rgba(139, 92, 246, 0.25)' : 'rgba(16, 185, 129, 0.25)';
+
+                    for (let x = 0; x < canvas.width; x += 10) {
+                        const y = Math.sin(x * 0.005 + step + i) * 30 + Math.cos(x * 0.01 + step) * 15 + (canvas.height / 2);
+                        if (x === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    ctx.stroke();
+                }
+                animationFrame = requestAnimationFrame(draw);
+            }
+
+            function updateAnimation() {
+                if (isVisible && !document.hidden && animationFrame === null) {
+                    lastFrameTime = 0;
+                    animationFrame = requestAnimationFrame(draw);
+                } else if ((!isVisible || document.hidden) && animationFrame !== null) {
+                    cancelAnimationFrame(animationFrame);
+                    animationFrame = null;
+                }
+            }
+
+            if ('IntersectionObserver' in window) {
+                new IntersectionObserver(entries => {
+                    isVisible = entries.some(entry => entry.isIntersecting);
+                    updateAnimation();
+                }).observe(canvas);
+            } else {
+                isVisible = true;
+            }
+            document.addEventListener('visibilitychange', updateAnimation);
+            updateAnimation();
+        }
+
+        window.onload = function() {
+            lucide.createIcons();
+            renderDiscography();
+            initWavesCanvas();
+        }
+    </script>
+</body>
+</html>
